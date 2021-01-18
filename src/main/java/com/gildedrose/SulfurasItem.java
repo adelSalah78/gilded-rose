@@ -7,6 +7,7 @@ public class SulfurasItem extends AbstractItem {
 
     @Override
     void decreaseSellIn() throws Exception {
-        throw new Exception("Not implemented");
+        //throw new Exception("Not implemented");
+        this.sellIn-=1;
     }
 }

@@ -6,7 +6,12 @@ public class AbstractItem extends Item {
     }
 
     void decreaseSellIn() throws Exception {
-        throw new Exception("Not implemented");
+        //throw new Exception("Not implemented");
+
+        this.sellIn-=1;
+        if(this.sellIn <= 0){
+            this.quality = this.quality / 2;
+        }
     }
 
 }

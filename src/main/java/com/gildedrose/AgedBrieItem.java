@@ -7,6 +7,9 @@ public class AgedBrieItem extends AbstractItem {
 
     @Override
     void decreaseSellIn() throws Exception {
-        throw new Exception("Not implemented");
+        //throw new Exception("Not implemented");
+
+        this.sellIn-=1;
+        this.quality+=1;
     }
 }
