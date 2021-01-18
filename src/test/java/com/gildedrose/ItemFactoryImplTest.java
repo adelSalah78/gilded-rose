@@ -10,29 +10,33 @@ import static org.junit.jupiter.api.Assertions.*;
 class ItemFactoryImplTest {
 
     AbstractItemFactory factory =  new ItemFactoryImpl();
+    Item item  = new Item("",0,0);
     @Test
     void createAgedBrieItem() {
-        Object item = factory.createItem("Aged Brie");
+        item.name = "Aged Brie";
+        Object item = factory.createItem(this.item);
         assertEquals(true,item instanceof AgedBrieItem);
     }
 
     @Test
     void createBackstageItem() {
-        Object item = factory.createItem("Backstage passes to a TAFKAL80ETC concert");
+        item.name = "Backstage passes to a TAFKAL80ETC concert";
+        Object item = factory.createItem(this.item);
         assertEquals(true,item instanceof BackstagePassesItem);
     }
 
     @Test
     void createSulfurasItem() {
-        Object item = factory.createItem("Sulfuras, Hand of Ragnaros");
+        item.name = "Sulfuras, Hand of Ragnaros";
+        Object item = factory.createItem(this.item);
         assertEquals(true,item instanceof SulfurasItem);
     }
 
     @Test
     @Disabled
     void createAbstractItem() {
-        Object item = factory.createItem("Aged Brie");
-        assertEquals(true,item instanceof AgedBrieItem);
+     //   Object item = factory.createItem("Aged Brie");
+       // assertEquals(true,item instanceof AgedBrieItem);
     }
 
 }
